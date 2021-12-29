@@ -7,8 +7,6 @@ services:
       - --default_authentication_plugin=mysql_native_password
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci     
-     #volumes:
-      # - ~/wsl-testing/wordpress/mysql:/var/lib/mysql
      restart: always
      environment:
        MYSQL_DATABASE: wordpress
@@ -22,7 +20,7 @@ services:
        - wordpress-mysql
      image: wordpress:latest
      ports:
-       - "30001:80"
+       - "2021:80"
      restart: always
      environment:
        WORDPRESS_DB_HOST: wordpress-mysql:3306
@@ -30,3 +28,5 @@ services:
        WORDPRESS_DB_USER: root
        WORDPRESS_DB_PASSWORD: docker233
      privileged: true
+     volumes:
+      - ~/wsl-testing/wordpress/wordpress:/var/www/html:rw
