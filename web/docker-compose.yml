@@ -1,21 +1,27 @@
 version: "3"
 services:
-   mynginx:
-     image: eraserandrain/centos:nginx
-    #  command:
-    #   - nginx
-     ports:
-      - "800:80"
-      - "802:82"
-     privileged: true
-     volumes:
-      - ~/wsl-testing/web/nginx:/etc/nginx:rw
-      - ~/wsl-testing/web:/usr/share/nginx:rw
-      - ~/bootstrap-practice:/opt:rw
+
+  #  mynginx:
+  #    image: eraserandrain/centos:nginx
+  #    container_name: mynginx
+  #    restart: always
+  #    privileged: true
+  #    stdin_open: true
+  #    tty: true
+  #    command:
+  #     - /bin/bash -c "nginx"
+  #    ports:
+  #     - "800:80"
+  #     - "802:82"
+  #    volumes:
+  #     - ~/wsl-testing/web/nginx:/etc/nginx:rw
+  #     - ~/wsl-testing/web:/usr/share/nginx:rw
+  #     - ~/bootstrap-practice:/opt:rw
   
-   watchtower:
-     image: containrrr/watchtower:latest
-     restart: always
-     privileged: true
-     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+  #  watchtower:
+  #    image: containrrr/watchtower:latest
+  #    container_name: watchtower
+  #    restart: always
+  #    privileged: true
+  #    volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
