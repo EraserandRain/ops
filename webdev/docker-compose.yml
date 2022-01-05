@@ -1,0 +1,27 @@
+version: "3"
+services:
+
+   mynginx:
+     image: nginx:latest
+     container_name: mynginx
+     restart: always
+     privileged: true
+     stdin_open: true
+     tty: true
+     ports:
+      - "8090:80"
+      - "8091:81"
+     volumes:
+      - ~/wsl-testing/webdev/nginx/log:/var/log/nginx:rw
+      - ~/wsl-testing/webdev/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:rw
+      - ~/wsl-testing/webdev/nginx/conf/conf.d:/etc/nginx/conf.d:rw
+      - ~/wsl-testing/webdev/frontend:/usr/share/nginx:rw
+      - ~/bootstrap-practice/html:/opt/html:rw
+  
+   watchtower:
+     image: containrrr/watchtower:latest
+     container_name: watchtower
+     restart: always
+     privileged: true
+     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
