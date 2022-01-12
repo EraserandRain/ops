@@ -1,0 +1,17 @@
+{
+    "name": "hello",
+    "location": "left",
+    "url": "http://localhost:8090/",
+    "browser":[
+        [
+            "baidu",
+            "www.baidu.com",
+            "hellobaidu"
+        ],
+        [
+            "google",
+            "www.google.com",
+            "hellogoogle"
+        ]
+    ]
+}

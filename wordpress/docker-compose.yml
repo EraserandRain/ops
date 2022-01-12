@@ -33,4 +33,4 @@ services:
        WORDPRESS_DB_PASSWORD: docker233
      privileged: true
      volumes:
-      - ~/wsl-testing/wordpress/wordpress:/var/www/html:rw
+      - ~/testing-env/wordpress/wordpress:/var/www/html:rw
