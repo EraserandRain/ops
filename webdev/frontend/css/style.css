@@ -1,16 +1,110 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body > *{
+
+html {
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    /* normal size = 1rem */
+}
+
+body {
+    max-width: 100vw;
+    width: 100vw;
+    background-color: #eee;
+}
+
+div {
     display: flex;
 }
+
+
+
 .wrapper {
     width: 100%;
-    padding: 20px;
+    height: 100vh;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 .wrapper h3 {
-    width: 200px;
+    width: 20rem;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@keyframes play {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#app {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    animation: play 5s linear infinite;
+}
+
+#app>div:nth-child(1) {
+    background-color: #fff;
+    width: 50%;
+}
+
+#app>div:nth-child(2) {
+    background-color: #000;
+    width: 50%;
+}
+
+.box {
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+#app>div:nth-child(3) {
+    background-color: #fff;
+    right: 25%;
+}
+
+#app>div:nth-child(4) {
+    background-color: #000;
+    left: 25%;
+    bottom: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    z-index: 2;
+}
+
+#app>div:nth-child(5) {
+    top: 20%;
+    right: 45%;
+    background-color: #000;
+}
+
+#app>div:nth-child(6) {
+    bottom: 20%;
+    left: 45%;
+    background-color: #fff;
 }
