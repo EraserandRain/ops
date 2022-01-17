@@ -1,3 +1,12 @@
+# wordpress
 wordpress/wordpress
+
+# web-demo
+web-demo/draggerable-div/dist/
+web-demo/**/*.log
+
+# webdev
+webdev/**/*.log
+
+# others
 .vscode/
-draggerable-div/dist/
