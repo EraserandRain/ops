@@ -1,37 +1,31 @@
 <template>
-  <div>
-    <div>{{ n }}</div>
-    <div class="cell" v-on:click="clickSelf">
-      <template v-if="a">{{ text }}</template>
-      <template v-else></template>
-    </div>
+  <div class="cell" v-on:click="ClickSelf">
+    <div v-if="a">{{ text }}</div>
+    <div v-else></div>
   </div>
 </template>
-
-    <script>
+<script>
 export default {
   props: ["n"],
-  data: () => {
+  data() {
     return { a: false, text: "" };
   },
   methods: {
-    clickSelf() {
+    ClickSelf() {
       if (this.text !== "") {
         return;
       }
       this.a = true;
-      this.$emit("click");
       this.text = this.n % 2 == 0 ? "x" : "o";
+      this.$emit("click",this.text);
     },
   },
 };
 </script>
-
 <style>
 .cell {
-  color: red;
-  border: 1px solid #000;
   height: 100px;
+  border: 3px solid #000;
   font-size: 80px;
   display: flex;
   justify-content: center;
