@@ -7,5 +7,5 @@ const p = document.createElement('p')
 const span = document.createElement('span')
 div.appendChild(p)
 p.appendChild(span)
-span.innerHTML="hello world"
+span.innerHTML = "hello world"
 document.body.appendChild(div)
