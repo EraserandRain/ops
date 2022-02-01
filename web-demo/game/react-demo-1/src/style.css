@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell {
+    border: 1px solid #000;
+    width: 100px;
+    height: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+.cellboard {
+    margin-top: 50px;
+}
+.row {
+    display: flex;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+}
+.gameOver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
