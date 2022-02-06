@@ -11,15 +11,8 @@ services:
      ports:
       - "8090:80"
      volumes:
-      - ~/testing-env/webdev/nginx/log:/var/log/nginx:rw
-      - ~/testing-env/webdev/nginx/conf/nginx.conf:/etc/nginx/nginx.conf:rw
-      - ~/testing-env/webdev/nginx/conf/conf.d:/etc/nginx/conf.d:rw
-      - ~/testing-env/webdev/frontend:/usr/share/nginx:rw
-  
-   watchtower:
-     image: containrrr/watchtower:latest
-     container_name: watchtower
-     restart: always
-     privileged: true
-     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ./nginx/log:/var/log/nginx:rw
+      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:rw
+      - ./nginx/conf/conf.d:/etc/nginx/conf.d:rw
+      - ./frontend:/usr/share/nginx:rw
+      

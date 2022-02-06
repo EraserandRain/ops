@@ -1,9 +1,5 @@
 # wordpress
-wordpress/wordpress
-
-# web-demo
-web-demo/draggerable-div/dist/
-web-demo/**/*.log
+wordpress-docker/wordpress
 
 # webdev
 webdev/**/*.log
