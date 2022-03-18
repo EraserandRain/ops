@@ -1,8 +1,6 @@
-# wordpress
-wordpress-docker/wordpress
-
-# webdev
-webdev/**/*.log
+#docker
+docker/*
+!docker/**/docker-compose.yml
 
 # others
 .vscode/
