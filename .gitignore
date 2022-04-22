@@ -1,6 +1,2 @@
-#docker
-/docker/*
-!**/docker-compose.yml
-
 # others
 .vscode/
