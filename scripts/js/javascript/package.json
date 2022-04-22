@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "jquery": "^3.6.0",
+    "jsdom": "^19.0.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "server": "npx parcel index.html"
+  }
+}
